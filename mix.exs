@@ -3,7 +3,7 @@ defmodule ExrmDeb.Mixfile do
 
   def project do
     [app: :exrm_deb,
-     version: "0.0.7",
+     version: "0.0.8",
      elixir: "~> 1.3",
      description: "Create a deb for your elixir release with ease",
      build_embedded: Mix.env == :prod,
@@ -14,7 +14,7 @@ defmodule ExrmDeb.Mixfile do
        "coveralls": :test,
        "coveralls.detail": :test,
        "coveralls.post": :test],
-     package: package]
+     package: package()]
   end
 
   def application, do: [applications: apps(Mix.env)]

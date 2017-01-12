@@ -7,8 +7,8 @@ defmodule ExrmDeb do
   alias Mix.Project
 
   def start_build(config) do
-    ExrmDeb.remove_deb_dir
-    deb_root = initialize_dir
+    ExrmDeb.remove_deb_dir()
+    deb_root = initialize_dir()
 
     {:ok, config} = Data.build(deb_root, config)
     :ok = Control.build(deb_root, config)

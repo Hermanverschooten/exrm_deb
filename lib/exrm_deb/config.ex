@@ -12,10 +12,9 @@ defmodule ExrmDeb.Config do
             owner: [user: "root", group: "root"]
 
   use Vex.Struct
-  alias ReleaseManager.Utils.Logger
-  alias ExrmDeb.Utils
   alias Mix.Project
-  import Logger, only: [debug: 1, error: 1]
+  alias ExrmDeb.Utils
+  import Logger, only: [error: 1]
 
   # This version number format should be able to handle regular version
   # numbers as well as alpha/beta versions
